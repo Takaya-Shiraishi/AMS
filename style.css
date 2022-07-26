@@ -1,0 +1,432 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Open Sans", sans-serif;
+    background: #e7e7e7;
+}
+
+.matrix th{
+    border:solid 1px;
+}
+
+.matrix td{
+    border:solid 1px;
+    padding:10px;
+}
+
+.matrix table{
+    letter-spacing: 1px;
+    text-align: center;
+    justify-content: center;
+    border-collapse:collapse;
+    margin:auto;
+}
+
+.matrix{
+    display:flex;
+    justify-items: center;
+    justify-content: center;
+    margin-top:auto;
+}
+
+.login {
+    position: relative;
+    top:25%;
+    margin: auto;
+}
+
+.res{
+    display:block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 28px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+
+p{
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+
+.txtinput{
+    position: relative;
+    margin: auto;
+    width: 500px;
+}
+
+h1 {
+    color: rgb(65, 65, 65);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+h3{
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.2),
+        0 1px 1px rgba(255, 255, 255, 0.2);
+    -webkit-transition: box-shadow 0.5s ease;
+    -moz-transition: box-shadow 0.5s ease;
+    -o-transition: box-shadow 0.5s ease;
+    -ms-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+}
+
+input:focus {
+    box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
+        0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+.btn-toolbar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 28px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+.btn{
+    display:flex;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:35px;
+    margin:auto 2%;
+}
+/*授業開始ボタン*/
+.start_btn {
+    display: block;
+    position: relative;
+    width: 150px;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #8BC34A;
+    background: #8BC34A;
+    overflow: hidden;
+    z-index: 1 !important;
+}
+
+.start_btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 100%;
+    background: #fff;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.start_btn:hover {
+    color: #3cb371;
+}
+
+.start_btn:hover:after {
+    height: 250%;
+    opacity: 1;
+}
+
+.start_btn:active:after {
+    height: 350%;
+    opacity: 1;
+}
+
+
+/*授業終了ボタン*/
+.end_btn {
+    position: relative;
+    display: block;
+    right: auto;
+    bottom: auto;
+    max-width: 150px;
+    width: 100%;
+    padding: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background: #1F886E;
+    border: solid 1px #036A1C;
+    overflow: hidden;
+}
+
+.end_btn:before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -20px;
+    height: 90px;
+    width: 20px;
+    background: #fff;
+    opacity: 0.3;
+    transform: rotate(40deg);
+    transition: 0.3s;
+}
+
+.end_btn:hover:before {
+    left: 98%;
+}
+
+
+/*出席記録表示ボタン*/
+.view_btn,
+.view_btn:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.view_btn:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+.view_btn:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+
+
+/*出席記録軽量化ボタン*/
+.maintenance_btn {
+    height: 33.33%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.maintenance_btn {
+    background-color: #66A182;
+}
+
+.maintenance_btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 150px;
+    cursor: pointer;
+}
+
+.maintenance_btn {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.maintenance_btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.maintenance_btn:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.maintenance_btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.2, 1.2);
+}
+
+.maintenance_btn:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+/*登録ボタン*/
+.register {
+    background-image: linear-gradient(135deg, #008aff, #86d472);
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: block;
+    height: 50px;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: 4px;
+    position: relative;
+    text-decoration: none;
+    width: 7em;
+    z-index: 2;
+    margin:28px auto;
+}
+
+.register:hover {
+    color: #fff;
+}
+
+.register .registerspan {
+    align-items: center;
+    background: #0e0e10;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+}
+
+.register:hover .registerspan {
+    background: transparent;
+}
+
+/*戻るボタン*/
+.return{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 75px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top:auto;
+}

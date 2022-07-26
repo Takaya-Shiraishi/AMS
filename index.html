@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>出席管理システム</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="login">
+    <h1>出席管理システム</h1>
+  <form method="post" action="./emp.php">
+    <div class="txtinput">
+      <input type="text" name="n" placeholder="氏名" required>
+      <input type="password" name="p" placeholder="パスワード" required>
+    </div>
+      <div class="btn-toolbar">
+      <button type="submit" class="btn start_btn" name="code" value="1">授業開始</button>
+      <button type="submit" class="btn end_btn" name="code" value="2">授業終了</button>
+      <button type="submit" class="btn view_btn" name="code" value="3">出席記録表示</button>
+      <button type="submit" class="btn maintenance_btn" name="code" value="4">出席記録軽量化</button>
+      </div>
+  </form>
+    <div class="btn-toolbar">
+    <button type="button" class="btn register" name="code" onclick="location.href='./register.html'"><span class="registerspan">受講者登録</span></button>
+    </div>
+  </div>
+  </body>
+
+</html>
